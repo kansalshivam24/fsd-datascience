@@ -1,0 +1,48 @@
+<html>
+    <body>
+        <input type="text" placeholder="name" id="name">
+        <input type="email" placeholder="e-mail" id="email">
+        <input type="text" placeholder="phone" id="phone">
+        <input type="text" placeholder="address" id="address">
+        <button onclick="adData()">Add</button>
+        <br><br>
+        <table border="2" id="table">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Address</th>
+            </tr>
+            
+        </table>
+        <script>
+            function adData(){
+                var el1=document.createElement('tr');
+                var el2=document.createElement('th');
+                var el3=document.createElement('th');
+                var el4=document.createElement('th');
+                var el5=document.createElement('th');
+            var valname=document.getElementById("name").value;
+            var valemail=document.getElementById("email").value;
+            var valphone=document.getElementById("phone").value;
+            var valaddress=document.getElementById("address").value;
+            var x=document.createTextNode(valname);
+            var y=document.createTextNode(valemail);
+            var z=document.createTextNode(valphone);
+            var m=document.createTextNode(valaddress);
+            el2.appendChild(x);
+            el3.appendChild(y);
+            el4.appendChild(z);
+            el5.appendChild(m);
+            var t=document.getElementById("table");
+            el1.appendChild(el2);
+            el1.appendChild(el3);
+            el1.appendChild(el4);
+            el1.appendChild(el5);
+            t.appendChild(el1);
+            }
+            </script>
+
+    </body>
+</html>
+        
